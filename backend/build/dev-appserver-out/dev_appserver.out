@@ -1,0 +1,24 @@
+Warning: Google App Engine Java 7 runtime is deprecated.
+Warning: See https://cloud.google.com/appengine/docs/deprecations/java7
+May 07, 2018 5:57:47 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+INFO: Overwriting system property key 'java.util.logging.config.file', value 'E:\Google Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'E:\Git\BuildItBigger\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
+May 07, 2018 5:57:48 PM com.google.apphosting.utils.jetty.JettyLogger info
+INFO: Logging to JettyLogger(null) via com.google.apphosting.utils.jetty.JettyLogger
+May 07, 2018 12:27:49 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+WARNING: Your working directory, (E:\Git\BuildItBigger) is not equal to your 
+web application root (E:\Git\BuildItBigger\backend\build\exploded-backend)
+You will not be able to access files from your working directory on the production server.
+
+May 07, 2018 12:27:51 PM com.google.apphosting.utils.jetty.JettyLogger info
+INFO: jetty-6.1.x
+May 07, 2018 12:27:55 PM com.google.apphosting.utils.jetty.JettyLogger info
+INFO: Started SelectChannelConnector@localhost:8080
+May 07, 2018 12:27:55 PM com.google.appengine.tools.development.AbstractModule startup
+INFO: Module instance default is running at http://localhost:8080/
+May 07, 2018 12:27:55 PM com.google.appengine.tools.development.AbstractModule startup
+INFO: The admin console is running at http://localhost:8080/_ah/admin
+May 07, 2018 5:57:55 PM com.google.appengine.tools.development.DevAppServerImpl doStart
+INFO: Dev App Server is now running
+May 07, 2018 6:08:44 PM com.google.appengine.tools.development.AbstractModule shutdown
+INFO: Shutting down module instance default
+Shutting down.
