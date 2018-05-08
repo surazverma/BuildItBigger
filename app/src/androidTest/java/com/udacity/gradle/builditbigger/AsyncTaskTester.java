@@ -1,19 +1,25 @@
 package com.udacity.gradle.builditbigger;
 
 import android.test.AndroidTestCase;
-import android.util.Log;
+
+import java.util.concurrent.CountDownLatch;
 
 public class AsyncTaskTester extends AndroidTestCase {
-    public void test(){
-        String output = null;
-        GCE_NetworkAsyncTask gce_networkAsyncTask =  new GCE_NetworkAsyncTask(getContext());
+    public void test() throws InterruptedException {
+        assertTrue(true);
+        final CountDownLatch signal = new CountDownLatch(1);
+        GCE_NetworkAsyncTask gce_networkAsyncTask = new GCE_NetworkAsyncTask(getContext()){
+            @Override
+            protected void onPostExecute(String result) {
+                assertNotNull(result);
+                if(result!=null){
+                    assertTrue(result.length()>0);
+                    signal.countDown();
+                }
+            }
+        };
         gce_networkAsyncTask.execute();
+        signal.await();
 
-        try {
-            output = gce_networkAsyncTask.get();
-            Log.d("AndroidTester","It is working and the output is  :"+output);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
     }
 }

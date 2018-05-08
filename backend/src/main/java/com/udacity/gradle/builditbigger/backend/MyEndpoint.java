@@ -23,7 +23,6 @@ public class MyEndpoint {
         MyBean response = new MyBean();
         JokingClass joker = new JokingClass();
         String libraryJoke = joker.Joke();
-//        response.setData("Hi, " + name);
         response.setData(libraryJoke);
         return response;
     }
